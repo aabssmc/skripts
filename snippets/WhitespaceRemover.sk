@@ -1,0 +1,14 @@
+# Requires skript-reflect and Skript
+
+import:
+    java.lang.Character
+
+function removeWhitespace(s: string) :: string:
+    set {_s::*} to {_s} split at ""
+    loop length of {_s} times:
+        set {_c} to loop-valueth element of {_s::*}
+        if Character.isWhitespace({_c}):
+            add loop-valueth element of {_s::*} to {_bad::*}
+    replace all {_bad::*} in {_s::*} with ""
+    set {_a} to join {_s::*} by ""
+    return {_a}

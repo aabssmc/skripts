@@ -1,0 +1,7 @@
+# Requires Skript
+
+function wordCounter(s: string) :: integer:
+	set {_e::*} to {_s} split at ""
+	remove all " " from {_e::*}
+	set {_m} to (size of {_s} split at ""-size of {_e::*})+1
+	return {_m}

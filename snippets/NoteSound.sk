@@ -1,0 +1,110 @@
+# Requires skript-reflect and Skript
+# --------------------------------
+# Works best with note block sounds
+# Try not to use other sounds
+
+effect:
+	patterns:
+		play[(-| )]sound %string% at volume %number% (at|with) [:low] [note] %string% [:sharp|:flat] (to|for) %entities%
+	parse:
+		if parse tags contains "low":
+			set {_low} to true
+		if parse tags contains "sharp":
+			set {_sharp} to true
+		if parse tags contains "flat":
+			set {_sharp} to true
+		continue
+	trigger:
+		if {_sharp} is true:
+			if {_low} is true:
+				if expr-3 is "A":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.629961 at location at expr-4
+				else if expr-3 is "B":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.667420 at location at expr-4
+				else if expr-3 is "C":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.749154 at location at expr-4
+				else if expr-3 is "D":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.840896 at location at expr-4
+				else if expr-3 is "E":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.890899 at location at expr-4
+				else if expr-3 is "F":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.5 at location at expr-4
+				else if expr-3 is "G":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.561231 at location at expr-4
+			else:
+				if expr-3 is "A":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.259921 at location at expr-4
+				else if expr-3 is "B":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.334840 at location at expr-4
+				else if expr-3 is "C":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.498307 at location at expr-4
+				else if expr-3 is "D":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.681793 at location at expr-4
+				else if expr-3 is "E":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.781797 at location at expr-4
+				else if expr-3 is "F":
+					play sound "%expr-1%" at volume expr-2 at pitch 1 at location at expr-4
+				else if expr-3 is "G":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.122462 at location at expr-4
+		else if {_flat} is true:
+			if {_low} is true:
+				if expr-3 is "A":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.561231 at location at expr-4
+				else if expr-3 is "B":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.629961 at location at expr-4
+				else if expr-3 is "C":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.707107 at location at expr-4
+				else if expr-3 is "D":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.749154 at location at expr-4
+				else if expr-3 is "E":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.840896 at location at expr-4
+				else if expr-3 is "F":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.943874 at location at expr-4
+				else if expr-3 is "G":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.5 at location at expr-4
+			else:
+				if expr-3 is "A":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.122462 at location at expr-4
+				else if expr-3 is "B":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.259921 at location at expr-4
+				else if expr-3 is "C":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.414214 at location at expr-4
+				else if expr-3 is "D":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.498307 at location at expr-4
+				else if expr-3 is "E":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.681793 at location at expr-4
+				else if expr-3 is "F":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.887749 at location at expr-4
+				else if expr-3 is "G":
+					play sound "%expr-1%" at volume expr-2 at pitch 1 at location at expr-4
+		else:
+			if {_low} is true:
+				if expr-3 is "A":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.594604 at location at expr-4
+				else if expr-3 is "B":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.667420 at location at expr-4
+				else if expr-3 is "C":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.707107 at location at expr-4
+				else if expr-3 is "D":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.793701 at location at expr-4
+				else if expr-3 is "E":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.890899 at location at expr-4
+				else if expr-3 is "F":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.943874 at location at expr-4
+				else if expr-3 is "G":
+					play sound "%expr-1%" at volume expr-2 at pitch 0.529732 at location at expr-4
+			else:
+				if expr-3 is "A":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.189207 at location at expr-4
+				else if expr-3 is "B":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.334840 at location at expr-4
+				else if expr-3 is "C":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.414214 at location at expr-4
+				else if expr-3 is "D":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.587401 at location at expr-4
+				else if expr-3 is "E":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.781797 at location at expr-4
+				else if expr-3 is "F":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.887749 at location at expr-4
+				else if expr-3 is "G":
+					play sound "%expr-1%" at volume expr-2 at pitch 1.059463 at location at expr-4
